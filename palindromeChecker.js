@@ -3,14 +3,17 @@ function palindrome(str) {
   let isPalindrome = true;
   
   //format str
-  str = str.toLowerCase();
-  let punctRemoved = str.replace(/,/g, "")
+  let strFormat = str.toLowerCase().split(',');   //.replace(/,\s\./g, ""); //attempted regex implementation
+  console.log(strFormat);
+  console.log(typeof(strFormat));
+  strFormat.join('');
+  console.log(strFormat);
+  console.log(typeof(strFormat));
   //put str into an array
-console.log(str);
-console.log(punctRemoved);
+  
   let strArray = [];
-  for (let i=0; i < str.length; i++) {
-    strArray.push(str.charAt(i));
+  for (let i=0; i < strFormat.length; i++) {
+    strArray.push(strFormat.charAt(i));
   }
 
 console.log(strArray);
